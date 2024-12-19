@@ -13,10 +13,10 @@
  "int"|"main"|"printf"|"scanf"|"for"|"return" { printf("Keyword: %s\n",yytext); }
  [a-zA-Z_$][a-zA-Z0-9_$]* { printf("iDENTIFIERS: %s\n",yytext); }
  [< >] { printf("Relational Operator: %s\n",yytext); }
- [< > = !][=] { printf(" Relational Operator: %s\n",yytext); }
- [+/-/*/\] { printf("Operator: %s\n",yytext); }
+ [< \> \= \!][=] { printf(" Relational Operator: %s\n",yytext); }
+ [+\-\*/] { printf("Operator: %s\n",yytext); }
  [\[\]\{\}\(\)] { printf("Brackets: %s\n",yytext); }
- [,;] { printf("Punctuation: %s\n",yytext); }
+ [\,\;] { printf("Punctuation: %s\n",yytext); }
  [ \t\n] { }
  . { printf("Unknown: %s\n",yytext); }
 
